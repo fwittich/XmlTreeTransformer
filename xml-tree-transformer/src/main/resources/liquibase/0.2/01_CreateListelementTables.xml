@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd 
+   http://www.liquibase.org/xml/ns/dbchangelog 
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+	<changeSet id="createListelementTables"
+		author="frank.wittich">
+		<createTable tableName="T_Listelement">
+			<column name="ListelementId" type="int">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="Value" type="varchar">
+				<constraints nullable="false" />
+			</column>
+			<column name="AttributeId" type="int">
+				<constraints nullable="false" />
+			</column>
+			<column name="Description" type="varchar" />
+		</createTable>
+	</changeSet>
+
+	<changeSet id="insertInsuredAmountListements"
+		author="frank.wittich">
+		<insert tableName="T_Listelement">
+			<column name="ListelementId" value="400" />
+			<column name="Value" value="10000" />
+			<column name="AttributeId" value="40" />
+		</insert>
+
+		<insert tableName="T_Listelement">
+			<column name="ListelementId" value="401" />
+			<column name="Value" value="20000" />
+			<column name="AttributeId" value="40" />
+		</insert>
+
+		<insert tableName="T_Listelement">
+			<column name="ListelementId" value="402" />
+			<column name="Value" value="50000" />
+			<column name="AttributeId" value="40" />
+		</insert>
+
+		<insert tableName="T_Listelement">
+			<column name="ListelementId" value="403" />
+			<column name="Value" value="100000" />
+			<column name="AttributeId" value="40" />
+		</insert>
+	</changeSet>
+
+	<changeSet id="insertGenderListelements"
+		author="frank.wittich">
+
+		<insert tableName="T_Listelement">
+			<column name="ListelementId" value="100" />
+			<column name="Value" value="male" />
+			<column name="AttributeId" value="100" />
+		</insert>
+
+
+		<insert tableName="T_Listelement">
+			<column name="ListelementId" value="101" />
+			<column name="Value" value="female" />
+			<column name="AttributeId" value="100" />
+		</insert>
+
+
+		<insert tableName="T_Listelement">
+			<column name="ListelementId" value="102" />
+			<column name="Value" value="others" />
+			<column name="AttributeId" value="100" />
+		</insert>
+
+	</changeSet>
+
+
+
+</databaseChangeLog>

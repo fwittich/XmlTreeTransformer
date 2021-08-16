@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+  xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd 
+   http://www.liquibase.org/xml/ns/dbchangelog 
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+   
+  	<changeSet id="AddDummyConfigEntries" author="frank.wittich">
+  		<insert tableName="T_Configuration">
+  			<column name="RootTreeElementId" value="1" />
+  			<column name="TreePath" value="1/4/15" />
+  			<column name="AttributeId" value="100"></column>
+  			<column name="Xpath" value="/Application/Customer/Gender[text()]" />
+  			<column name="ValueTransformerName" value="Gender" />
+  		</insert>
+  		
+  		<insert tableName="T_Configuration">
+  			<column name="RootTreeElementId" value="1" />
+  			<column name="TreePath" value="1/4/15" />
+  			<column name="AttributeId" value="110"></column>
+  			<column name="Xpath" value="/Application/Customer/FirstName[text()]" />
+  			<column name="ValueTransformerName" value="Direct" />
+  		</insert>
+  		
+  		<insert tableName="T_Configuration">
+  			<column name="RootTreeElementId" value="1" />
+  			<column name="TreePath" value="1/4/15" />
+  			<column name="AttributeId" value="111"></column>
+  			<column name="Xpath" value="/Application/Customer/LastName[text()]" />
+  			<column name="ValueTransformerName" value="Direct" />
+  		</insert>
+  		
+  		<insert tableName="T_Configuration">
+  			<column name="RootTreeElementId" value="1" />
+  			<column name="TreePath" value="1/4/15" />
+  			<column name="AttributeId" value="200"></column>
+  			<column name="Xpath" value="/Application/Customer/DayOfBirth[text()]" />
+  			<column name="ValueTransformerName" value="Date" />
+  		</insert>
+  		
+  		<insert tableName="T_Configuration">
+  			<column name="RootTreeElementId" value="1" />
+  			<column name="TreePath" value="1/4/28" />
+  			<column name="AttributeId" value="90"></column>
+  			<column name="DefaultValue" value="Hello"></column>
+  		</insert>
+  		
+  		<insert tableName="T_Configuration">
+  			<column name="RootTreeElementId" value="1" />
+  			<column name="TreePath" value="1/4/28" />
+  			<column name="AttributeId" value="91"></column>
+  			<column name="DefaultValue" value="true" />
+  		</insert>
+  		
+  		<insert tableName="T_Configuration">
+  			<column name="RootTreeElementId" value="1" />
+  			<column name="TreePath" value="1/64" />
+  			<column name="AttributeId" value="40" />
+  			<column name="Xpath" value="/Application/Product/Benefits/Benefit[@type='insuredAmount']" />
+  			<column name="ValueTransformerName" value="Listelement" />
+  		</insert>
+  		
+  		
+  	</changeSet>
+
+    
+</databaseChangeLog>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Application>
+	<Customer>
+		<FirstName>Jon</FirstName>
+		<LastName>Doe</LastName>
+		<Gender>m</Gender>
+		<DayOfBirth>2000-01-01</DayOfBirth>
+	</Customer>
+	<Product>
+		<Benefits>
+			<Benefit type="insuredAmount">10000</Benefit>
+			<Benefit type="coverage">all</Benefit>
+		</Benefits>
+	</Product>
+</Application>
